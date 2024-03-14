@@ -124,7 +124,7 @@ def check_controller_storage(charm_type: Type[ops.charm.CharmBase]) -> bool:
 
 def load_charm_type() -> Type[ops.charm.CharmBase]:
     charm_name: Optional[str] = CHARM_NAME
-
+    raise ValueError("PWD: " + os.getcwd())
     module = importlib.import_module("charm")
     charm_subclasses = [
         (identifier, obj)
